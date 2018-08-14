@@ -9,11 +9,12 @@
 * [twitter](https://twitter.com/@extratoristrial)
 * [linkedin](https://www.linkedin.com/in/victoria-stake-a6680b80/)
 
-_is this bold?_
+
 
 __no this is bold__
 
-___does this do anyhting___
+___does this do anyhting___             
 
 ___ohhhh shit that's fancy___
 
+**Here's a fun fact:** *I have been to the southernmost point in Europe!*
