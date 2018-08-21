@@ -1,73 +1,118 @@
-     body {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            color: silver;
-            width: 850px;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 100%;
-        }
 
-        .container {
-            width: 500px;
-            max-width: 100%;
-        }
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: silver;
+    display: grid;
+    grid-template-areas: 
+    "navigation"
+    "header"
+    "content"
+    "contact"
+    "footer";
+    grid-template-rows: min-content min-content auto min-content;
+  
+}
 
-        a {
-            color: mediumaquamarine;
-        }
+/*   width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;  */
 
-        a:visited {
-            color: slategray;
-        }
+#header {
 
-        a:hover {
-            color: whitesmoke;
-        }
+}
 
-        em {
-            color: mediumaquamarine;
-        }
+#content {
 
-        strong {
-            color: mediumaquamarine; 
-        }
+}
 
-        p {
-            word-wrap: inherit;
-            text-indent: 2.0em;   
-        }
-        div.navigation {
-                border: 0.5px;
-                border-style: solid;
-                border-color: mediumaquamarine;
-                padding: 1px;
-                text-align: center;
-                text-shadow: .5px .5px mediumaquamarine;
-                width: 850px;
-                max-width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        div.contact {
-                 text-align: center;
-                 display: block;
-                 padding: 1px;
-                 text-align: center;
-                 text-shadow: .35px .35px mediumaquamarine;
-                 width: 850px;
-                 max-width: 100%;
-                 margin-left: auto;
-                 margin-right: auto;
-        }
-        h1 {
-                text-align: center;
-            }
-     img {
-         margin-right: 5px;
-         float: left;
-         display: block;
-     }
+#navigation {
+    border: 0.5px;
+    border-style: solid;
+    border-color: mediumaquamarine;
+    text-shadow: .5px .5px mediumaquamarine;
+    position: sticky;
+    top: 0;
+}
 
-     .footer {
-         text-align: center;
-     }
+#navigation > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#navigation > ul > li {
+    display: inline;
+    position: relative;
+}
+
+#navigation a + ul {
+    left: 0;
+    position: absolute;
+    display: none;
+    list-style: none;
+    padding: 10px;
+    background-color: white;
+    width: 80px;
+}
+
+#navigation a + ul:hover,
+#navigation a:hover + ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact {
+    text-align: center;
+    display: block;
+    padding: 1px;
+    text-align: center;
+    text-shadow: .35px .35px mediumaquamarine;
+    width: 850px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+#footer {
+    text-align: center;
+    }
+
+h1 {
+    text-align: center;
+    }
+
+img {
+    margin-right: 5px;
+    float: left;
+    display: block;
+    }
+
+a {
+    color: mediumaquamarine;
+    }
+  
+a:visited {
+    color: slategray;
+    }
+        
+a:hover {
+    color: whitesmoke;
+    }
+    
+em {
+    color: mediumaquamarine;
+    }
+    
+strong {
+    color: mediumaquamarine; 
+    }
+
+.container {
+    margin: 0 auto;
+    max-width: 850px;
+    width: 100%;
+}
+    
+
+    

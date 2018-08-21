@@ -13,22 +13,30 @@
 </head>
 
 <body> 
-    
-    <div>
+    <div id="navigation">
+        <!-- Navigation, div class "navigation container"-->
+        <ul>
+                <li><a href="./index.html" alt="Home">Home</a></li>
+                <li><a href="./blog/index.html" alt="Blog">Blog</a></li>
+                <li><a href="./projects/index.html" alt="Projects" id="list">
+                    Projects</a>
+                    <ul>
+                        <li>drop 1</li>
+                        <li>drop 2</li>
+                        <li>drop 3</li>
+                    </ul>
+                </li>
+            </ul>
+    </div>
+
+    <div id="header">
         <!-- Header -->
         <h1>h e l l o , w o r l d</h1>
     </div>
 
-    <div class="navigation container">
-        <!-- Navigation -->
-        <p>
-            <a href="./index.html" alt="Home">Home</a> | 
-            <a href="./projects/index.html" alt="Projects">Projects</a> | 
-            <a href="./blog/index.html" alt="Blog">Blog</a>
-        </p>
-    </div>
+
     <p></p>
-    <div>
+    <div id="content">
         <!-- Main Content -->
       <img src="https://i.imgur.com/VsNNvTm.jpg" alt="A close-up of a grey striped cat's face with galaxy patterned bow-tie " style="border-style: dotted; border-width: 1.5px; border-color:mediumaquamarine;" >
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nisi ipsum blanditiis cumque rerum, quo ipsam illum similique provident est minus doloremque maxime enim quia exercitationem iste? Maxime, quaerat fuga?
@@ -43,7 +51,7 @@
 
     </div>
     
-    <div class="contact">
+    <div id="contact">
         <!-- Contact Info -->
         <p>
             <a href="mailto:v.m.stake@gmail.com">E-mail </a> |  
@@ -54,7 +62,7 @@
 
 </body>
 
-<div class="footer">
+<div id="footer">
     <!-- Footer -->
     <h6>&#169; Victoria Stake 2018 </h6>
 </div>
