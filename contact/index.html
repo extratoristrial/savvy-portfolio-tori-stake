@@ -24,7 +24,6 @@
     <ul>
             <li><a href="../index.html" alt="Home">Home</a></li>
             <li><a href=".././blog/index.html" alt="Blog">Blog</a></li>
-            <li><a href="../contact/index.html">Contact</a></li>
             <li><a href=".././projects/index.html" alt="Projects" id="list">
                 Projects</a>
                 <ul>
@@ -33,31 +32,37 @@
                     <li>drop 3</li>
                 </ul>
             </li>
+            <li><a href="../contact/index.html">Contact</a></li>
         </ul>
 </div>
 
+<div id="header">
+  <h1>h e l l o , c o n t a c t </h1>
+</div>
+
+
+
 <form action="https://formspree.io/v.m.stake@gmail.com" method="POST">
 
-    <div><label><h3>Contact information</h1>
+    <div> 
         <input type="text" name="firstname" placeholder="First Name" autofocus required>
-        <input type="text" name="lastname" placeholder="Last Name" required>
+        <input type="text" name="lastname" placeholder="Last Name" required> <br>
         <input type="email" name="userEmail" placeholder="E-mail" required>
         <input type="number" name="phone" placeholder="Phone #">
-        </label>
-    </div>
+    </div><br>
 
-    <div><label>What's this message about?
-      <input type="radio" name="subject" value="professional"><span>I'd like to hire you!</span>
-      <input type="radio" name="subject" value="personal"><span>Personal message</span>
-      <input type="radio" name="subject" value="other"><span>Something else</span>
-    </label></div>
+    <div><label id="question">What's this message about?<br>
+      <input type="radio" name="subject" value="professional"><span>I'd like to hire you!</span><br>
+      <input type="radio" name="subject" value="personal"><span>Personal message</span><br>
+      <input type="radio" name="subject" value="other"><span>Something else</span><br>
+    </label></div><br>
     
-    <div><label for="subscribe">Interested in recievieving updates? 
-    <input type="checkbox" name="optin" value="trusting">Yes, subscribe me to your newsletter!
-    <input type="checkbox" name="optout" value="skeptical">No Way Jose!
-    </label></div>
+    <div><label for="subscribe">Interested in recievieving updates? <br>
+    <input type="checkbox" name="optin" value="trusting">Yes, subscribe me to your newsletter! <br>
+    <input type="checkbox" name="optout" value="skeptical">Absolutely not and how dare you for asking!<br>
+    </label></div><br>
 
-    <div><label for="marketing">How did you hear about me?</label>
+    <div><label for="marketing">How did you hear about me?</label><br>
     <select name="marketing">
       <optgroup label="Online">
         <option value="social">Social Media (FB, Twitter, LinkedIn)</option>
@@ -71,11 +76,13 @@
         <option value="random">We met somewhere else</option>
       </optgroup>
       <option value="other">Other</option>
-    </select></div>
+    </select></div><br>
   
-    <textarea name="user_message" rows="8" cols="40" required   accesskey="" placeholder="Comments"></textarea>
+    <textarea name="user_message" rows="8" cols="40"     accesskey="" placeholder="Additional information"></textarea> <br>
     <input type="submit">
+
   </form>
+  </div>
 
 </body>
 

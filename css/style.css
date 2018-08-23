@@ -1,6 +1,7 @@
 
 body {
-    font-family: 'Alegreya', serif;    color: silver;
+    font-family: 'Alegreya', serif;    
+    color: silver;
     display: grid;
     grid-template-areas: 
     "navigation"
@@ -8,7 +9,7 @@ body {
     "content"
     "footer";
     grid-template-rows: min-content min-content auto min-content;
-  
+
 }
 
 #header {
@@ -19,14 +20,14 @@ body {
 #content {
     grid-area: content;
     margin: 10px 10px;
-
 }
+
 
 #navigation {
     border: 0.5px;
     border-style: solid;
     border-color: mediumaquamarine;
-    text-shadow: .5px .5px mediumaquamarine;
+    text-shadow: .5px .5px rgb(150, 233, 205);
     position: sticky;
     top: 0;
     grid-area: navigation;
@@ -45,7 +46,7 @@ body {
 
 #navigation a + ul {
     left: 0;
-    position: absolute;
+    position: ABSOLUTE;
     display: none;
     list-style: none;
     padding: 10px;
@@ -66,6 +67,8 @@ body {
 
 h1 {
     text-align: center;
+    text-shadow: 2px 2px rgb(150, 233, 205);
+
     }
 
 img {
@@ -85,29 +88,46 @@ a:visited {
 a:hover {
     color: whitesmoke;
     }
-    
-em {
-    color: mediumaquamarine;
-    }
-    
-strong {
-    color: mediumaquamarine; 
-    }
-
 
 form {
-    
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 
 }
     
 input[type=text],
 input[type=email],
 input[type=number] {
-    width: 100px;
-    display: block;
+    width: 200px;
     margin: 5px 5px;
 }
 
+input[type=radio], 
+input[type=checkbox] {
+    margin: 5px 5px;
+}
+
+input[type=submit] {
+    margin: 5px 5px;
+    background-color: white;
+    color: silver;
+    text-shadow: .5px .5px rgb(150, 233, 205);
+    border: none;
+    font-size: 25px; 
+}
+
+input[type=submit]:hover {
+    background-color: mediumaquamarine;
+    color: mediumaquamarine;
+    text-shadow: none;
+}
+
+select {
+    margin: 5px 5px;
+}
 .fab {
     color: mediumaquamarine;
 }
@@ -122,11 +142,28 @@ input[type=number] {
       "navigation header"
       "navigation content"
       "navigation footer";
-      grid-template-columns: 20% auto;
+      grid-template-columns: 15% auto;
       grid-template-rows: min-content auto min-content;
     }
 
     #navigation > ul{
         flex-direction: column;
+    }
+
+    #navigation {
+        border: none;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #navigation a + ul {
+        left: 0;
+        position: inherit;
+        display: none;
+        list-style: none;
+        padding: 10px;
+        background-color: white;
+        width: 80px;
     }
 }
