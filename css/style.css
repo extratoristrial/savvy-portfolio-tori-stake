@@ -65,6 +65,13 @@ body {
     grid-area: footer;
     }
 
+#greeting {
+    text-align: center;
+}
+
+#greeting>p {
+    color: mediumaquamarine;
+}
 h1 {
     text-align: center;
     text-shadow: 2px 2px rgb(150, 233, 205);
