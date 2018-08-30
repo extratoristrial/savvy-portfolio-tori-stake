@@ -1,5 +1,5 @@
 
-body {
+#root {
     font-family: 'Alegreya', serif;    
     color: silver;
     display: grid;
@@ -67,11 +67,13 @@ body {
 
 #greeting {
     text-align: center;
+    color: mediumaquamarine;
 }
 
 #greeting>p {
-    color: mediumaquamarine;
+    font-weight: bold;
 }
+
 h1 {
     text-align: center;
     text-shadow: 2px 2px rgb(150, 233, 205);
@@ -144,7 +146,7 @@ select {
 }
 
 @media screen and (min-width: 500px) {
-    body {
+    #root {
       grid-template-areas:
       "navigation header"
       "navigation content"

@@ -1,5 +1,14 @@
 
-var name = prompt("Hi there! What\'s your name?");
-var output = document.querySelector('#greeting');
+import Navigation from '../components/Navigation.js';
+import Header from '../components/Header.js';
+import Content from '../components/Content.js';
+import Footer from '../components/Footer.js';
 
-output.innerHTML = '<p>Thanks for visiting, ' + name + '.</p>';
+document
+    .querySelector('#root')
+    .innerHTML = `
+        ${Navigation}
+        ${Header}
+        ${Content}
+        ${Footer}`;
+
