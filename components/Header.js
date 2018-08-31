@@ -1,6 +1,8 @@
-export default `
-<div id="header">
-<!-- Header -->
-<h1>h e l l o , w o r l d</h1>
-</div>
-`;
+export default function Header(state){
+    return `
+        <div id="header">
+            <h1>${state.title}</h1>
+        </div>
+        <div id="greeting"></div>
+            `;
+}
