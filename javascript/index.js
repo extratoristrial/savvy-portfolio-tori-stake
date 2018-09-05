@@ -4,31 +4,65 @@ import Header from '../components/Header.js';
 import Content from '../components/Content.js';
 import Footer from '../components/Footer.js';
 
-var state = {
-    'title': 'h e l l o , w o r l d'
+var State = {
+    'active': 'Home',
+    'Home': {
+        'title': 'h e l l o , w o r l d'
+    },
+    'Blog': {
+        'title': 'h e l l o , b l o g'
+    },
+    'Projects': {
+        'title': 'h e l l o , p r o j e c t s'
+    },
+    'Contact': {
+        'title': 'h e l l o , c o n t a c t'
+    }
 };
 
-document
-    .querySelector('#root')
-    .innerHTML = `
+var root = document.querySelector('#root');
+
+function handleNavigation(event){
+    var newState = State;
+
+    newState.active = event.target.textContent;
+
+    event.preventDefault();
+
+    render(newState);
+}
+
+function render(state){
+    var links;
+
+    root.innerHTML = `
         ${Navigation()}
-        ${Header(state)}
+        ${Header(state[state.active])}
         ${Content()}
         ${Footer()}`;
 
-document
-    .querySelector('h1')
-    .addEventListener(
-        'click',
-        function changeTheTitle(event){
-            var title = 'h e l l o , w o r l d';
+    links = document.querySelectorAll('#navigation a');
 
-            if(event.target.textContent === title){
-                event.target.textContent = 'Oh shit, look what you did! Quick, fix it!';
-            }
-            else{
-                event.target.textContent = title
-                ;
-            }
-        }
+    links[0].addEventListener(
+        'click',
+        handleNavigation
     );
+    
+    links[1].addEventListener(
+        'click',
+        handleNavigation
+    );
+    
+    links[2].addEventListener(
+        'click',
+        handleNavigation
+    );
+    
+    links[3].addEventListener(
+        'click',
+        handleNavigation
+    );
+}
+
+render(State);
+
