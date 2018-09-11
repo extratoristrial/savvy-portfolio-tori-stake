@@ -5,17 +5,21 @@ import Content from '../components/Content.js';
 import Footer from '../components/Footer.js';
 
 var State = {
-    'active': 'Home',
-    'Home': {
+    'active': 'home',
+    'home': {
+        'links': [ 'blog', 'projects', 'contact' ],
         'title': 'h e l l o , w o r l d'
     },
-    'Blog': {
+    'blog': {
+        'links': [ 'home', 'projects', 'contact' ],
         'title': 'h e l l o , b l o g'
     },
-    'Projects': {
+    'projects': {
+        'links': [ 'home', 'blog', 'contact' ],
         'title': 'h e l l o , p r o j e c t s'
     },
-    'Contact': {
+    'contact': {
+        'links': [ 'home', 'blog', 'projects' ],
         'title': 'h e l l o , c o n t a c t'
     }
 };
@@ -36,7 +40,7 @@ function render(state){
     var links;
 
     root.innerHTML = `
-        ${Navigation()}
+        ${Navigation(state[state.active])}
         ${Header(state[state.active])}
         ${Content()}
         ${Footer()}`;

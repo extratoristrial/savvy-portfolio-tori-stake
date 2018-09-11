@@ -1,18 +1,27 @@
-export default function Navigation(){
+
+function Link(link){
     return `
-    <div id="navigation">
-    <ul>
-            <li><a href="index.html" alt="Home">Home</a></li>
-            <li><a href="blog/index.html" alt="Blog">Blog</a></li>
-            <li><a href="projects/index.html" alt="Projects" id="list">Projects</a>
-                <ul>
-                    <li>drop 1</li>
-                    <li>drop 2</li>
-                    <li>drop 3</li>
-                </ul>
-            </li>
-            <li><a href="contact/index.html">Contact</a></li>
-        </ul>
-    </div>
+        <li>
+            <a href="/${link}">${link}</a>
+        </li>
+    `;
+}
+
+
+export default function Navigation(state){
+    var links = '';
+
+    console.log(state.links);
+
+    for(let i = 0; i < state.links.length; i++){
+        links += Link(state.links[i]);
+    }
+
+    return `
+        <div id="navigation">
+            <ul>
+                ${links}
+            </ul>
+        </div>
     `;
 }
