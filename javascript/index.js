@@ -1,33 +1,15 @@
 
-import Navigation from '../components/Navigation.js';
-import Header from '../components/Header.js';
-import Content from '../components/Content.js';
-import Footer from '../components/Footer.js';
+import Navigation from '../components/Navigation';
+import Header from '../components/Header';
+import Content from '../components/Content';
+import Footer from '../components/Footer';
+import * as State from '../store';
 
-var State = {
-    'active': 'home',
-    'home': {
-        'links': [ 'blog', 'projects', 'contact' ],
-        'title': 'h e l l o , w o r l d'
-    },
-    'blog': {
-        'links': [ 'home', 'projects', 'contact' ],
-        'title': 'h e l l o , b l o g'
-    },
-    'projects': {
-        'links': [ 'home', 'blog', 'contact' ],
-        'title': 'h e l l o , p r o j e c t s'
-    },
-    'contact': {
-        'links': [ 'home', 'blog', 'projects' ],
-        'title': 'h e l l o , c o n t a c t'
-    }
-};
 
 var root = document.querySelector('#root');
 
 function handleNavigation(event){
-    var newState = State;
+    var newState = Object.assign({}, State);
 
     newState.active = event.target.textContent;
 
@@ -42,7 +24,7 @@ function render(state){
     root.innerHTML = `
         ${Navigation(state[state.active])}
         ${Header(state[state.active])}
-        ${Content()}
+        ${Content(state[state.active])}
         ${Footer()}`;
 
     links = document.querySelectorAll('#navigation a');
