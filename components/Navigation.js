@@ -1,8 +1,14 @@
 
 function Link(link){
+    var href = '';
+
+    if(link !== 'home'){
+        href = link;
+    }
+
     return `
         <li>
-            <a href="/${link}">${link}</a>
+            <a href="/${href}" data-navigo>${link}</a>
         </li>
     `;
 }
