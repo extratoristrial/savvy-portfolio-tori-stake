@@ -27,7 +27,7 @@
     border: 0.5px;
     border-style: solid;
     border-color: mediumaquamarine;
-    text-shadow: .5px .5px rgb(150, 233, 205);
+    text-shadow: 1px 1px rgb(150, 233, 205);
     position: sticky;
     top: 0;
     grid-area: navigation;
@@ -88,10 +88,11 @@ img {
 
 a {
     color: mediumaquamarine;
+    text-decoration: none;
     }
   
 a:visited {
-    color: slategray;
+    color: silver;
     }
         
 a:hover {

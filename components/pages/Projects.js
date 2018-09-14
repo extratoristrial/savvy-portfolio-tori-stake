@@ -1,4 +1,5 @@
-export default `
+export default function Projects(){
+    return `
 <div id="content">
 <ol>
     <li>Class Showcase</li>
@@ -7,3 +8,4 @@ export default `
 </ol>
 </div>
 `;
+}

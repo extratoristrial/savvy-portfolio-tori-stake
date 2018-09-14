@@ -15,14 +15,11 @@ function Link(link){
 
 
 export default function Navigation(state){
-    var links = '';
-
-    console.log(state.links);
-
-    for(let i = 0; i < state.links.length; i++){
-        links += Link(state.links[i]);
-    }
-
+    var links = state
+        .links
+        .map(Link)
+        .join(' ');
+        
     return `
         <div id="navigation">
             <ul>

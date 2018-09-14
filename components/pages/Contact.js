@@ -1,6 +1,5 @@
-export default `
-
-
+export default function Contact(){
+    return `
 <form action="https://formspree.io/v.m.stake@gmail.com" method="POST">
 
     <div> 
@@ -11,14 +10,14 @@ export default `
     </div><br>
 
     <div><label id="question">What's this message about?<br>
-      <input type="radio" name="subject" value="professional"><span>I'd like to hire you!</span><br>
-      <input type="radio" name="subject" value="personal"><span>Personal message</span><br>
+      <input type="radio" name="subject" value="professional"><span>Job Inquiry</span><br>
+      <input type="radio" name="subject" value="personal"><span>Personal comment and/or question</span><br>
       <input type="radio" name="subject" value="other"><span>Something else</span><br>
     </label></div><br>
     
     <div><label for="subscribe">Interested in recievieving updates? <br>
     <input type="checkbox" name="optin" value="trusting">Yes, subscribe me to your newsletter! <br>
-    <input type="checkbox" name="optout" value="skeptical">Absolutely not and how dare you for asking!<br>
+    <input type="checkbox" name="optout" value="skeptical">No thanks, I'm good!<br>
     </label></div><br>
 
     <div><label for="marketing">How did you hear about me?</label><br>
@@ -42,3 +41,4 @@ export default `
 
   </form>
 `;
+}
