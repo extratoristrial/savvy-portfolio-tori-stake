@@ -4,7 +4,7 @@
   "description": "![this is my face, i am definitely a shibe](https://i.imgur.com/81qyN1y.jpg)",
   "main": "index.js",
   "scripts": {
-    "start": "parcel build index.html",
+    "start": "parcel build index.html && cp _redirects ./dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
