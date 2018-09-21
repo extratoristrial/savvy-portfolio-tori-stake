@@ -80,6 +80,10 @@ h1 {
 
     }
 
+h3 {
+    text-align: center;
+}
+
 img {
     margin-right: 5px;
     float: left;

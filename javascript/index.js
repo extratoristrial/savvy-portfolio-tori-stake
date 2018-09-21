@@ -2,30 +2,36 @@ import Axios from 'axios';
 import Navigo from 'navigo';
 import Navigation from '../components/Navigation';
 import Header from '../components/Header';
+import Greeter from '../components/Greeter';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
-import * as State from '../store';
+import store from '../store/store';
 
 var root = document.querySelector('#root');
 var router = new Navigo(window.location.origin);
-var newState = Object.assign({}, State);
+var greeter = new Greeter(store.dispatch);
 
-function render(state){
+function render(){
+    var state = store.getState();
+
+    console.log(state);
+
     root.innerHTML = `
         ${Navigation(state[state.active])}
-        ${Header(state[state.active])}
+        ${Header(state)}
         ${Content(state)}
         ${Footer()}
         `;
+
+    greeter.render(root);
 
     router.updatePageLinks();
 }
 
 function handleNavigation(activePage){
-    newState.active = activePage;
-
-    render(newState);
+    store.dispatch((state) => Object.assign(state, { 'active': activePage }));
 }
+
 
 router
     .on('/:page', (params) => handleNavigation(params.page))
@@ -35,7 +41,7 @@ router
 Axios
     .get('https://jsonplaceholder.typicode.com/posts')
     .then((response) => {
-        newState.posts = response.data;
-
-        render(newState);
+        store.dispatch((state) => Object.assign(state, { 'posts': response.data }));
     });
+
+store.addListeners(render);
