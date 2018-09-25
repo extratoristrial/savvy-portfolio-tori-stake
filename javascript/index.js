@@ -58,13 +58,18 @@ Axios
     });
 
 Axios
-    .get('https://api.github.com/users/extratoristrial/repos')
+    .get('https://api.github.com/users/extratoristrial/repos', {
+        'headers': {
+              'Authorization': `token ${process.env.GITHUB_API_KEY}` //eslint-disable-line
+        }
+    })
     .then((response) => {
         store.dispatch((state) => {
             state.repos = response.data;
-
+    
             return state;
         });
     });
+    
 
 store.addStateListener(render);
