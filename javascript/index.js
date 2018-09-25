@@ -48,7 +48,7 @@ Axios
     });
 
 Axios
-    .get('http://api.openweathermap.org/data/2.5/weather?zip=63108&appid=1e7c603f536ba94b36847d01c8d473ff')
+    .get('https://api.openweathermap.org/data/2.5/weather?zip=63108&appid=1e7c603f536ba94b36847d01c8d473ff')
     .then((response) => {
         store.dispatch((state) => {
             state.weather = response.data;
