@@ -15,7 +15,7 @@ class Store{
         return this.state;
     }
 
-    addListeners(listener){
+    addStateListener(listener){
         this.listeners.push(listener);
     }
 }

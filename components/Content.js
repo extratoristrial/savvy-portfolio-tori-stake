@@ -7,7 +7,7 @@ export default function Content(state){
     return `
     <div id="content">
         <div>
-            ${Pages[page.body](state.posts)}
+            ${Pages[page.body](state)}
         </div>
     </div>`;
 }

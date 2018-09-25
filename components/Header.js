@@ -1,11 +1,12 @@
 export default function Header(state){
-    var title = state[state.active].title;
-    
+    var page = state[state.active];
+        
     return `
         <div id="header">
-            <h1>${title}</h1>
-            <h3>Welcome, ${state.greeting}!</h3>
+            <h1>${page && page.title}</h1>
+
         </div>
         <div id="greeting"></div>
             `;
 }
+

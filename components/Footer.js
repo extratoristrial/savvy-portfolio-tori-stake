@@ -1,4 +1,6 @@
-export default function Footer(){
+import Weather from './Weather';
+
+export default function Footer(state){
     return `
   <div id="footer">
           <p>
@@ -13,5 +15,6 @@ export default function Footer(){
               </a>
           </p>
           <h6>&#169; Victoria Stake 2018 </h6>
+          <p>${Weather(state.weather)}</p>
       </div>`;
 }
