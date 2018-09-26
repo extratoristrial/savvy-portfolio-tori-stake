@@ -1,5 +1,6 @@
 import Axios from 'axios';
 import Navigo from 'navigo';
+import { tween, timeline, styler } from 'popmotion';
 import Content from '../components/Content';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -19,6 +20,38 @@ function render(){
         ${Footer(state)}
         `;
 
+    document
+        .querySelector('h1')
+        .addEventListener('click', (event) => {
+            var animation = timeline([
+                {
+                    'track': 'size',
+                    'from': {
+                        'fontSize': '200%'
+                    },
+                    'to': {
+                        'fontSize': '300%',
+                    },
+                    'duration': 2000
+                },
+                {
+                    'track': 'location',
+                    'from': {
+                        'x': 0
+                    },
+                    'to': {
+                        'x': 100
+                    }
+                }
+            ]);
+                
+            var title = styler(event.target);
+
+            animation.start((value) => {
+                title.set(value.size);
+                title.set(value.location);
+            });
+        });
 
     router.updatePageLinks();
 }

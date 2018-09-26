@@ -77,8 +77,12 @@
 h1 {
     text-align: center;
     text-shadow: 2px 2px rgb(150, 233, 205);
-
+    transition: .5s all ease;
     }
+
+h1:hover {
+    text-shadow: none;
+}
 
 h3 {
     text-align: center;
@@ -101,6 +105,9 @@ a:visited {
         
 a:hover {
     color: whitesmoke;
+    transition: .15s font-size ease;
+    font-size: 125%;
+    
     }
 
 form {
@@ -144,6 +151,11 @@ select {
 }
 .fab {
     color: mediumaquamarine;
+}
+
+.fab:hover {
+    transition: .15s font-size ease;
+    font-size: 125%;
 }
 
 .far {
